@@ -68,6 +68,7 @@
         <a href="#" data-view="dashboard" class="nav-link active"><i class="fas fa-chart-pie"></i> Dashboard</a>
         <a href="#" data-view="tasks" class="nav-link"><i class="fas fa-tasks"></i> Tasks</a>
         <a href="#" data-view="fitness" class="nav-link"><i class="fas fa-dumbbell"></i> Fitness</a>
+        <a href="#" data-view="diary" class="nav-link"><i class="fas fa-book"></i> Diary</a>
         <a href="#" data-view="music" class="nav-link"><i class="fas fa-headphones"></i> Music & Timer</a>
       </nav>
 
@@ -219,6 +220,32 @@
               <div class="workout-history mt-15">
                 <h4>Recent Workouts</h4>
                 <ul id="workout-list"></ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Diary View -->
+        <section id="view-diary" class="view hidden">
+          <h1 class="page-title">Personal Diary</h1>
+          <div class="diary-layout">
+            <div class="diary-editor glass-panel">
+              <h3>Write an Entry</h3>
+              <form id="diary-form">
+                <input type="text" id="diary-title" placeholder="Entry Title..." required>
+                <textarea id="diary-content" class="diary-textarea" placeholder="Dear Diary, today I..." required></textarea>
+                <button type="submit" class="btn btn-primary mt-15"><i class="fas fa-save"></i> Save Entry</button>
+              </form>
+            </div>
+            
+            <div class="diary-entries glass-panel">
+              <h3>Past Entries</h3>
+              <div id="diary-list" class="diary-list mt-15">
+                <!-- Diary entries injected here -->
+              </div>
+              <div id="diary-empty-state" class="empty-state hidden">
+                <i class="fas fa-book-open empty-icon"></i>
+                <p>No entries yet. Start writing!</p>
               </div>
             </div>
           </div>

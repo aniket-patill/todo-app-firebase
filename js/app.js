@@ -4,6 +4,7 @@ import { initAuth } from './auth.js';
 import { initTasks } from './tasks.js';
 import { initFitness } from './fitness.js';
 import { initMusic } from './music.js';
+import { initDiary } from './diary.js';
 import { switchView, toggleTheme, initTheme } from './ui.js';
 
 // Initialization Execution Maps Array
@@ -42,11 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
       // User mapping securely gracefully tracked array structurally mappings 
       initTasks(user);
       initFitness(user);
+      initDiary(user);
       // Default array map logic tracking
       switchView('dashboard');
     } else {
       initTasks(null);
       initFitness(null);
+      initDiary(null);
     }
   });
 });

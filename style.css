@@ -240,6 +240,22 @@ body.dark-mode .progress-bar-container { background: rgba(255,255,255,0.1); }
 .workout-history ul { list-style: none; margin-top: 10px; }
 .workout-history li { padding: 10px; border-bottom: 1px solid var(--panel-border); display: flex; justify-content: space-between; }
 
+/* Diary View */
+.diary-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.diary-textarea { width: 100%; height: 200px; padding: 15px; border-radius: 12px; margin-top: 15px; border: 1px solid var(--panel-border); background: rgba(255,255,255,0.2); color: var(--text-main); outline: none; transition: var(--transition); resize: none; font-family: inherit; }
+body.dark-mode .diary-textarea { background: rgba(0,0,0,0.2); }
+.diary-textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 2px rgba(79, 138, 255, 0.2); }
+#diary-title { margin-top: 15px; }
+
+.diary-list { display: flex; flex-direction: column; gap: 15px; max-height: 400px; overflow-y: auto; padding-right: 5px; }
+.diary-entry { background: rgba(255,255,255,0.4); border-radius: 12px; padding: 15px; border: 1px solid var(--panel-border); transition: var(--transition); }
+body.dark-mode .diary-entry { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1); }
+.diary-entry:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.diary-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+.diary-header h4 { margin: 0; font-size: 1.1rem; color: var(--text-main); word-break: break-all; }
+.diary-date { font-size: 0.8rem; color: var(--text-muted); }
+.diary-body { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; white-space: pre-wrap; word-break: break-word; }
+
 /* Music View */
 .music-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .timer-display { font-size: 4rem; font-weight: 700; color: var(--primary); margin: 20px 0; font-family: monospace; }
@@ -272,5 +288,6 @@ body.dark-mode .toast { background: var(--text-main); color: #1e1e2f; }
   .sidebar-footer { margin-top: 0; padding-top: 0; border: none; align-items: center; }
   .search-bar { width: 100%; max-width: 200px; }
   .music-layout { grid-template-columns: 1fr; }
+  .diary-layout { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
 }
