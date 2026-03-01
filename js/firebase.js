@@ -7,13 +7,13 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/10.8.1/firebase
 
 // TODO: Replace with your actual Firebase project config
 const firebaseConfig = {
-  apiKey: "AIzaSyCBrcKKUgXBzf9F3Fu9H7xoKiL9c9ddOFA",
-  authDomain: "todo-app-72113.firebaseapp.com",
-  projectId: "todo-app-72113",
-  storageBucket: "todo-app-72113.firebasestorage.app",
-  messagingSenderId: "226973448485",
-  appId: "1:226973448485:web:a85c669a604796ea19c2cc",
-  measurementId: "G-DMG690DS0V"
+  apiKey: "#",
+  authDomain: "#",
+  projectId: "#",
+  storageBucket: "#",
+  messagingSenderId: "#",
+  appId: "#",
+  measurementId: "#"
 };
 
 // Initialize Firebase App
