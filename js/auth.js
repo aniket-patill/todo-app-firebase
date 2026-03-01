@@ -36,7 +36,8 @@ export function initAuth(callback) {
   onAuthStateChanged(auth, (user) => {
     if (user) {
       // User logged in
-      userEmailDisplay.textContent = user.email;
+      const displayName = user.displayName || user.email.split('@')[0];
+      userEmailDisplay.textContent = displayName;
       showScreen('app-screen');
       showToast(`Welcome back, ${user.email.split('@')[0]}!`);
       if(userStateCallback) userStateCallback(user);
