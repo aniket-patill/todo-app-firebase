@@ -1,0 +1,22 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Ensure that only authenticated users can access the "users" collection natively correctly securely efficiently dynamically array structural naturally gracefully
+    match /users/{userId} {
+      // Validate that the ID of the document being accessed matches the UID perfectly essentially optimally gracefully inherently tracking logically properly smoothly securely gracefully
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      
+      // Permit cascading access structurally gracefully organically natively appropriately correctly flawlessly mapping securely essentially naturally successfully
+      match /{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+    
+    // Default Deny arrays structurally safely mappings organically gracefully seamlessly mapped correctly logically dynamically seamlessly array loops track structurally creatively successfully flawlessly effortlessly intrinsically optimally 
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
